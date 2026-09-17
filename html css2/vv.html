@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>K-Pop Fan Center</title>
+</head>
+<body>
+
+    <!-- CONTAINER UTAMA -->
+    <div class="main-container">
+        
+        <!-- MENU PILIHAN IDOL -->
+        <header class="menu-pilihan">
+            <h1>Pilih Idol Favoritmu</h1>
+            <div class="btn-group">
+                <button class="btn-idol active" onclick="pilihIdol('karina')">1. Karina (aespa)</button>
+                <button class="btn-idol" onclick="pilihIdol('winter')">2. Winter (aespa)</button>
+            </div>
+        </header>
+
+        <!-- ================= KONTEN KARINA ================= -->
+        <section id="konten-karina" class="section-idol">
+            <h2 class="title-idol">Karina Showcase</h2>
+            <div class="media-grid">
+                <!-- Foto-foto Karina -->
+                <div class="media-card">
+                    <img src="images/karina1.jpg" alt="Karina 1">
+                </div>
+                <div class="media-card">
+                    <img src="images/karina2.jpg" alt="Karina 2">
+                </div>
+                <!-- Video Karina (Bisa pakai video lokal atau embed YouTube) -->
+                <div class="media-card video-card">
+                    <h3>Official Video</h3>
+                    <!-- Contoh pakai embed YouTube (bisa kamu ganti linknya) -->
+                    <iframe src="images/Karinavid1.mp4" title="Karina Video" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= KONTEN WINTER (IDOL LAIN) ================= -->
+        <section id="konten-winter" class="section-idol d-none">
+            <h2 class="title-idol">Winter Showcase</h2>
+            <div class="media-grid">
+                <!-- Foto-foto Winter -->
+                <div class="media-card">
+                    <img src="images/winter1.jpg" alt="Winter 1">
+                </div>
+                <div class="media-card">
+                    <img src="images/winter2.jpg" alt="Winter 2">
+                </div>
+                <!-- Video Winter -->
+                <div class="media-card video-card">
+                    <h3>Official Video</h3>
+                    <iframe src="https://www.youtube.com/embed/Z0S_YAnzGfk" title="Winter Video" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <div id="mediaModal" class="modal d-none" onclick="tutupModal()">
+        <span class="close-btn">&times;</span>
+        <img id="modalImg" class="modal-content d-none" src="" alt="Full View">
+        <div id="modalVideoContainer" class="modal-content d-none">
+            <iframe id="modalVideo" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="js/vv.js"></script>
+</body>
+</html>
